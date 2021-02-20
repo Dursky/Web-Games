@@ -20,9 +20,26 @@ function drawBall() {
 function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     drawBall();
-    x += dx;
-    y += dy;
+  // x += dx;
+  //    y += dy;
 }
 
+document.getElementById("btn_left").addEventListener("click",() => {
+  //document.getElementById("demo").innerHTML = "Hello World";
+  x-= dx;
+});
+document.getElementById("btn_right").addEventListener("click",() => {
+  //document.getElementById("demo").innerHTML = "Hello World";
+  x+= dx;
+});
+
+document.getElementById("btn_up").addEventListener("click",() => {
+  //document.getElementById("demo").innerHTML = "Hello World";
+  y-= dx;
+});
+document.getElementById("btn_down").addEventListener("click",() => {
+  //document.getElementById("demo").innerHTML = "Hello World";
+  y+= dx;
+});
 setInterval(draw, 10);
 })
